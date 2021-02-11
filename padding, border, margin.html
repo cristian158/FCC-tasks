@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <style>
+        :root { /* globally available variables */
+          --penguin-belly: pink;
+        }
+        body {
+          background-color: black;
+        }
+
+        .injected-text {
+          margin-bottom: -25px;
+          text-align: center;
+        }
+
+        .box {
+          border-style: solid;
+          border-color: blue;
+          border-width: 5px;
+          text-align: center;
+        }
+
+        .yellow-box {
+          background-color: yellow; /*fallback*/
+          background-color: #c5c40d;
+          padding: 10px;
+        }
+
+        .red-box {
+          background-color: crimson;
+          color: #fff;
+          padding: 1.5em;
+          margin: 20px;
+          margin-top: 40px;
+        }
+
+        .blue-box {
+          background-color: blue;
+          color: #fff;
+          padding: 10px;
+          margin: 10px;
+          padding-bottom: 20px;
+        }
+
+        [type='checkbox'] {
+          margin: 30px 40px 15px 40px;
+        }
+      </style>
+      <h5 class="injected-text">margin</h5>
+
+      <div class="box yellow-box">
+        <h5 class="box red-box">padding</h5>
+        <h5 class="box blue-box">padding</h5>
+      </div>
+    <title></title>
+    <!-- padding: amount of space between the element's content and its border
+     margin: amount of space between an element's border and surrounding elements,
+     if negative value, the element will grow larger.
+    -->
+
+  </head>
+  <body>
+  </body>
+</html>
