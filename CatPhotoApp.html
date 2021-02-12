@@ -14,15 +14,17 @@
 
     <style>
     body{
-      background-color: rgba(61, 235, 202, 0.4);
-      background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png');
+      background-color: rgba(94,227,238,0.4); /* greenish
+      background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png');*/
       opacity: 1;
     }
       h2 {
         color: blue;
         font-family: Lobster;
         padding-left: 20px;
+        padding-bottom: 20px;
         padding: 8px;
+        background-color: rgba(18,70,60,0.4);
       }
       h4 {
         text-align: center;
@@ -34,8 +36,8 @@
       P {
         font-size: 16px;
         font-family: monospace;
-        background-color: rgba(224, 245, 241, 0.5);#e0f5f1;
         padding: 23px;
+        background-color: rgba(224, 245, 241, 0.5); /* == #e0f5f1, white green*/
       }
       nav ul {
         margin: 0px;
@@ -46,7 +48,7 @@
         margin-right: 20px;
       }
       a {
-        color: #c6faf1;
+        color: #c6faf1; /*watery soft greenish*/
       }
       a:hover {
         color: red;
@@ -59,7 +61,7 @@
       .fullCard {
         background-color: white;
         width: 310px;
-        border: 1px solid #ccc;
+        border: 1px solid #ccc; /*grey*/
         border-radius: 5px;
         margin: auto;
         padding: 4px;
@@ -70,24 +72,15 @@
       .cardText {
         margin-bottom: 30px;
       }
-      .blue-text {
-        color: #318ae3 !important;
-      }
       .red-text {
-        color: #c50d2f;
+      color: #c50d2f !important; /* overrides all previous styling rules, use
+      only if absolutely necessary*/
+
       }
       .smaller-image{
         width: 100px;
       }
-      .thick-green-border {
-        border-color: green;
-        border-width: 10px;
-        border-style: solid;
-        border-radius: 10px;
-      }
-      .silver-background {
-        background-color: silver;
-      }
+
       .ball {
         width: 40px;
         height: 40px;
@@ -110,22 +103,21 @@
 
       #main-pic{
         display: block;
-        background-color: green;
         margin: auto;
       }
       #thumbnail{
         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
       }
       #cat-photo-form {
-        position: absolute;
-        background: linear-gradient(35deg, #CCFFFF, #FFCCCC)
-
+        position: relative;
+        font-family: monospace;
+        font-size: 1.4em;
       }
       #searchbar {
-        position: relative;
+        position: absolute;
         down: 150px;
-        right: 10px;
-        top: 30px;
+        right: 30px;
+        top: 38px;
 
       }
       #navbar {
@@ -134,22 +126,29 @@
         left: 0px;
         width: 100%;
         background-color: #767676;
+        font-family: monospace;
+        font-size: 1.5em;
       }
       #left {
         float: left;
-        width: 50%;
+        width: 49%;
+        position: relative;
       }
       #right {
         float: right;
-        width: 40%;
+        width: 49%;
+
       }
       aside, section {
         padding: 2px;
-        background-color: #ccc;
+        background-color: #c6faf1;
       }
 
       [type='checkbox'] {
         margin: 20px 5px 15px 5px;
+      }
+      #main {
+        margin: 0px 200px 0px 200px;
       }
     </style>
     <!-- 'id' is referenced with #
@@ -167,8 +166,8 @@
       </ul>
     </nav>
     <!-- any markup with the content of the page (displayed for user) goes here -->
-    <h2 class='red-text silver-background'><br> CatPhotoApp</h2>
-    <main>
+    <h2 class='red-text'><br> CatPhotoApp</h2>
+    <main id='main'>
       <div class="ball" id= "ball1"></div>
       <div class="ball" id= "ball2"></div><br><br><br><br><br><br>
        <p>To view more, visit: <a href="https://freecatphotoapp.com"
@@ -188,7 +187,7 @@
       class declarations order in the <style> section is what is important
       inline style overrides all CSS declarations in <style>
     -->
-
+        <!-- CONTENT -->
       <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
         attack your ankles chase the red dot, hairball run catnip eat the grass sniff.
         Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
@@ -206,47 +205,64 @@
         using the keyboard. Missing until dinner time toy mouse squeak roll over. With
         tail in the air lounge in doorway. Man running from cops stops to pet cats,
         goes to jail.</p>
-
       <p class='red-text'>Intently stare at the same spot poop in the plant pot but kitten is playing
         with dead mouse. Get video posted to internet for chasing red dot leave fur
         on owners clothes meow to be let out and mesmerizing birds leave fur on owners
         clothes or favor packaging over toy so purr for no reason. Meow to be let out
         play time intently sniff hand run outside as soon as door open yet destroy
         couch.</p>
-    
-      <div class="">
+      <div style='font-family: monospace'>
+        <section id="left">
+          <p>Things cats love:</p>
+          <ul>
+            <li>cat nip</li>
+            <li>laser pointers</li>
+            <li>lasagna</li>
+          </ul>
+        </section>
+        <aside id="right">
+          <p>Top 3 things cats hate:</p>
+          <ol>
+            <li>flea treatment</li>
+            <li>thunder</li>
+            <li>other cats</li>
+          </ol>
+        </aside>
 
-        <form action='https://freecatphotoapp.com/submit-cat-photo' id='cat-photo-form'>
-          <!-- indoor input needs value or it sets to default 'on';
-          checked attribute added to buttons to be checked by default;
-          checkboxes can be multiple options at the same time
-          radio buttons are boolean
-        -->
-
-          <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"
-            value="indoor" checked> Indoor</label>
-            <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"
-              value="outdoor"> Outdoor</label><br>
-              <label for="loving"><input id="loving" type="checkbox" name="personality"
-                value="loving" checked> Loving</label>
-                <label for="lazy"><input id="lazy" type="checkbox" name="personality"
-                  value="lazy"> Lazy</label>
-                  <label for="energetic"><input id="energetic" type="checkbox" name="personality"
-                    value="energetic"> Energetic</label><br>
-
-                    <input type="text" placeholder="cat photo URL" required>
-                    <button type="submit">Submit</button>
-
-        </form>
       </div>
-      <p id='bottom space'></p>
-      <section>
+
+
+      <form action='https://freecatphotoapp.com/submit-cat-photo' id='cat-photo-form'>
+        <!-- indoor input needs value or it sets to default 'on';
+        checked attribute added to buttons to be checked by default;
+        checkboxes can be multiple options at the same time
+        radio buttons are boolean
+      -->
+
+        <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"
+          value="indoor" checked> Indoor</label>
+          <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"
+            value="outdoor"> Outdoor</label><br>
+            <label for="loving"><input id="loving" type="checkbox" name="personality"
+              value="loving" checked> Loving</label>
+              <label for="lazy"><input id="lazy" type="checkbox" name="personality"
+                value="lazy"> Lazy</label>
+                <label for="energetic"><input id="energetic" type="checkbox" name="personality"
+                  value="energetic"> Energetic</label><br>
+
+                  <input type="text" placeholder="cat photo URL" required>
+                  <button type="submit">Submit</button>
+
+      </form>
+      <br><br>
+      <div>
         <form id="searchbar">
           <label for="search">Search:</label>
           <input type="search" id="search" name="search">
           <input type="submit" name="submit" value="Go!">
         </form>
-      </section>
+      </div>
+
     </main>
 
     <div class="fullCard" id='thumbnail'>
@@ -262,7 +278,6 @@
         </div>
       </div>
     </div>
-
 
     <footer id='footer'>Copyright Cat Photo App</footer>
 
