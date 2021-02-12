@@ -1,0 +1,141 @@
+body{
+  background-color: rgba(94,227,238,0.4); /* greenish
+  background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png');*/
+  opacity: 1;
+}
+a {
+  color: #b2e1d8; /*watery soft greenish*/
+}
+a:hover {
+  color: red;
+}
+h2 {
+  color: blue;
+  font-family: Lobster;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding: 8px;
+  background-color: rgba(18,70,60,0.4);
+}
+h4 {
+  text-align: center;
+  background-color: rgba(45, 45, 45, 0.1);
+  padding: 10px;
+  font-size: 27px;
+  text-transform: uppercase;
+}
+P {
+  font-size: 16px;
+  font-family: monospace;
+  padding: 23px;
+  background-color: rgba(224, 245, 241, 0.5); /* == #e0f5f1, white green*/
+}
+nav ul {
+  margin: 0px;
+  padding: 5px 0px 5px 30px;
+}
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+.ball {
+  width: 40px;
+  height: 40px;
+  margin: 50 auto;
+  position: fixed;
+  background: linear-gradient(
+    35deg,
+    #ccffff,
+    #ffcccc
+    );
+    border-radius: 50%;
+  }
+.cardContent {
+  padding: 10px;
+}
+.cardText {
+  margin-bottom: 30px;
+}
+.fullCard {
+  background-color: white;
+  width: 310px;
+  border: 1px solid #ccc; /*grey*/
+  border-radius: 5px;
+  margin: auto;
+  padding: 4px;
+}
+.red-text {
+  color: #c50d2f !important; /* overrides all previous styling rules, use
+  only if absolutely necessary*/
+}
+.smaller-image{
+  width: 100px;
+}
+.wikilinks {
+  text-align: left;
+  color: black;
+  opacity: 0.4;
+}
+#ball1 {
+  left: 20%;
+}
+#ball2 {
+  left: 65%;
+  transform: scale(1.5)
+}
+#cat-photo-form {
+  position: relative;
+  font-family: monospace;
+  font-size: 1.4em;
+  top: 10px;
+}
+#main {
+  margin: 0px 250px 0px 250px;
+}
+#main-pic{
+  display: block;
+  margin: auto;
+}
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #767676;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+#searchbar {
+  position: absolute;
+  down: 150px;
+  right: 30px;
+  top: 38px;
+
+}
+#thumbnail{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+#left {
+  float: left;
+  width: 49%;
+  position: relative;
+}
+#right {
+  float: right;
+  width: 49%;
+
+}
+aside, section {
+  padding: 2px;
+  background-color: #c6faf1;
+}
+
+[type='checkbox'] {
+  margin: 20px 5px 15px 5px;
+}
+
+/* 'id' is referenced with #
+ Class start with . when declared, not in elements' class attribute
+.smaller-image can be called class='smaller-image' to specify img width
+<img class="class1 class2 class 3">
+*/

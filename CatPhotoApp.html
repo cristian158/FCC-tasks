@@ -12,150 +12,8 @@
     magenta	hsl(300, 100%, 50%) (color wheel, amount of grey amount of white,)
     background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);-->
 
-    <style>
-    body{
-      background-color: rgba(94,227,238,0.4); /* greenish
-      background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png');*/
-      opacity: 1;
-    }
-      h2 {
-        color: blue;
-        font-family: Lobster;
-        padding-left: 20px;
-        padding-bottom: 20px;
-        padding: 8px;
-        background-color: rgba(18,70,60,0.4);
-      }
-      h4 {
-        text-align: center;
-        background-color: rgba(45, 45, 45, 0.1);
-        padding: 10px;
-        font-size: 27px;
-        text-transform: uppercase;
-      }
-      P {
-        font-size: 16px;
-        font-family: monospace;
-        padding: 23px;
-        background-color: rgba(224, 245, 241, 0.5); /* == #e0f5f1, white green*/
-      }
-      nav ul {
-        margin: 0px;
-        padding: 5px 0px 5px 30px;
-      }
-      nav li {
-        display: inline;
-        margin-right: 20px;
-      }
-      a {
-        color: #c6faf1; /*watery soft greenish*/
-      }
-      a:hover {
-        color: red;
-      }
-      .wikilinks {
-        text-align: left;
-        color: black;
-        opacity: 0.4;
-      }
-      .fullCard {
-        background-color: white;
-        width: 310px;
-        border: 1px solid #ccc; /*grey*/
-        border-radius: 5px;
-        margin: auto;
-        padding: 4px;
-      }
-      .cardContent {
-        padding: 10px;
-      }
-      .cardText {
-        margin-bottom: 30px;
-      }
-      .red-text {
-      color: #c50d2f !important; /* overrides all previous styling rules, use
-      only if absolutely necessary*/
+    <link rel="stylesheet" type="text/css" href="CatPhotoApp.css" />
 
-      }
-      .smaller-image{
-        width: 100px;
-      }
-
-      .ball {
-        width: 40px;
-        height: 40px;
-        margin: 50 auto;
-        position: fixed;
-        background: linear-gradient(
-          35deg,
-          #ccffff,
-          #ffcccc
-        );
-        border-radius: 50%;
-      }
-      #ball1 {
-        left: 20%;
-      }
-      #ball2 {
-        left: 65%;
-        transform: scale(1.5)
-      }
-
-      #main-pic{
-        display: block;
-        margin: auto;
-      }
-      #thumbnail{
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-      }
-      #cat-photo-form {
-        position: relative;
-        font-family: monospace;
-        font-size: 1.4em;
-      }
-      #searchbar {
-        position: absolute;
-        down: 150px;
-        right: 30px;
-        top: 38px;
-
-      }
-      #navbar {
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        background-color: #767676;
-        font-family: monospace;
-        font-size: 1.5em;
-      }
-      #left {
-        float: left;
-        width: 49%;
-        position: relative;
-      }
-      #right {
-        float: right;
-        width: 49%;
-
-      }
-      aside, section {
-        padding: 2px;
-        background-color: #c6faf1;
-      }
-
-      [type='checkbox'] {
-        margin: 20px 5px 15px 5px;
-      }
-      #main {
-        margin: 0px 200px 0px 200px;
-      }
-    </style>
-    <!-- 'id' is referenced with #
-     Class start with . when declared, not in elements' class attribute
-    .smaller-image can be called class='smaller-image' to specify img width
-    <img class="class1 class2 class 3">
-    -->
   </head>
   <body>
     <nav id="navbar">
@@ -171,10 +29,7 @@
       <div class="ball" id= "ball1"></div>
       <div class="ball" id= "ball2"></div><br><br><br><br><br><br>
        <p>To view more, visit: <a href="https://freecatphotoapp.com"
-         target="_blank">cat photos</a></p> <!-- target blank opens in another
-         page, if not, refreshes
-         inline style declaration: <p style="color: red"></p>'-->
-
+         target="_blank">cat photos</a></p> <!-- target blank opens in another page, if not, refreshes -->
          <!-- MAIN PIC -->
       <div >
         <a href='https://freecatphotoapp.com'><img id='main-pic' class='smaller-image' src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying
@@ -230,15 +85,12 @@
         </aside>
 
       </div>
-
-
       <form action='https://freecatphotoapp.com/submit-cat-photo' id='cat-photo-form'>
         <!-- indoor input needs value or it sets to default 'on';
         checked attribute added to buttons to be checked by default;
         checkboxes can be multiple options at the same time
         radio buttons are boolean
       -->
-
         <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"
           value="indoor" checked> Indoor</label>
           <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"
