@@ -9,7 +9,7 @@ a {
 a:hover {
   color: red;
 }
-h2 {
+h1 {
   color: blue;
   font-family: Lobster;
   padding-left: 20px;
@@ -43,13 +43,9 @@ nav li {
   height: 40px;
   margin: 50 auto;
   position: fixed;
-  background: linear-gradient(
-    35deg,
-    #ccffff,
-    #ffcccc
-    );
-    border-radius: 50%;
-  }
+  background: linear-gradient(35deg, #ccffff, #ffcccc);
+  border-radius: 50%;
+}
 .cardContent {
   padding: 10px;
 }
@@ -123,7 +119,7 @@ nav li {
 #right {
   float: right;
   width: 49%;
-
+  position: relative;
 }
 aside, section {
   padding: 2px;
