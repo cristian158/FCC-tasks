@@ -4,136 +4,145 @@
     <!-- Any markup with information about your page would go into the head-->
     <meta>
     <title>Kitty</title>
-    <link href="https://fonts.googleapis.com/css?family=Lobster"
-    rel="stylesheet" type="text/css"> <!-- imports google font -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster'
+    rel='stylesheet' type='text/css'> <!-- imports google font -->
     <!-- font-family: FAMILY_NAME, GENERIC_NAME (optional)
     Generic font family names not case-sensitive.
     Not need quotes because they are CSS keywords.
     magenta	hsl(300, 100%, 50%) (color wheel, amount of grey amount of white,)
     background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);-->
-
-    <link rel="stylesheet" type="text/css" href="CatPhotoApp.css" />
-
+    <link rel='stylesheet' type='text/css' href='CatPhotoApp.css'>
   </head>
   <body>
-    <nav id="navbar">
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Portfolio</a></li>
-      </ul>
-    </nav>
-    <!-- any markup with the content of the page (displayed for user) goes here -->
-    <h1 class='red-text'><br> CatPhotoApp</h1>
-    <main id='main'>
-      <div class="ball" id= "ball1"></div>
-      <div class="ball" id= "ball2"></div><br><br><br><br><br><br>
-       <p>To view more, visit: <a href="https://freecatphotoapp.com"
-         target="_blank">cat photos</a></p> <!-- target blank opens in another page, if not, refreshes -->
-         <!-- MAIN PIC -->
-      <div>
-        <a href='https://freecatphotoapp.com'><img id='main-pic' class='smaller-image'
-          src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-          <!-- the # href makes DEAD LINK -->
-      </div>
-      <p style='background-color: transparent'><a href='#footer'>Jump to Bottom</a></p>
-      <!--p element got style set transparent to contrarrest the class
-      'id' overrides class, regardless declaration time
-      class overrides body element's CSS
-      class declarations order in the <style> section is what is important
-      inline style overrides all CSS declarations in <style>
-    -->
-        <!-- CONTENT -->
-      <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
-        attack your ankles chase the red dot, hairball run catnip eat the grass sniff.
-        Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
-        rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor
-        sit amet, shed everywhere shed everywhere stretching attack your ankles chase
-        the red dot, hairball run catnip eat the grass sniff.</p>
-      <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
-        rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor
-        sit amet, shed everywhere shed everywhere stretching attack your ankles chase
-        the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass
-        rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the
-        sink fluffy fur catnip scratched.</p>
-      <p>Meowwww loved it, hated it, loved it, hated it yet spill litter box, scratch
-        at owner, destroy all furniture, especially couch or lay on arms while you're
-        using the keyboard. Missing until dinner time toy mouse squeak roll over. With
-        tail in the air lounge in doorway. Man running from cops stops to pet cats,
-        goes to jail.</p>
-      <p class='red-text'>Intently stare at the same spot poop in the plant pot but kitten is playing
-        with dead mouse. Get video posted to internet for chasing red dot leave fur
-        on owners clothes meow to be let out and mesmerizing birds leave fur on owners
-        clothes or favor packaging over toy so purr for no reason. Meow to be let out
-        play time intently sniff hand run outside as soon as door open yet destroy
-        couch.</p>
-      <div style='font-family: monospace'>
-        <section id="left">
-          <p>Things cats love:</p>
+    <div class='container'>
+      <div class='header'>
+        <nav id='navbar'>
           <ul>
-            <li>cat nip</li>
-            <li>laser pointers</li>
-            <li>lasagna</li>
+            <li><a href="">Home</a></li>
+            <li><a href='CatPhotoApp2.html'>Contact</a></li>
+            <li><a href="">Portfolio</a></li>
           </ul>
-        </section>
-        <aside id="right">
-          <p>Top 3 things cats hate:</p>
-          <ol>
-            <li>flea treatment</li>
-            <li>thunder</li>
-            <li>other cats</li>
-          </ol>
-        </aside>
+        </nav>
+        <!-- any markup with the content of the page (displayed for user) goes here -->
+        <h1 class='red-text'><br> CatPhotoApp</h1>
       </div>
-      <hr>
-      <form action='https://freecatphotoapp.com/submit-cat-photo' id='cat-photo-form'>
-        <!-- indoor input needs value or it sets to default 'on';
-        checked attribute added to buttons to be checked by default;
-        checkboxes can be multiple options at the same time
-        radio buttons are boolean
-      -->
-        <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"
-          value="indoor" checked> Indoor</label>
-          <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"
-            value="outdoor"> Outdoor</label><br>
+      <div class='item2'>advert</div>
+      <div class='content'>
+        <main id='main'>
+          <div class='ball' id='ball1'></div>
+          <div class='ball' id='ball2'></div>
+          <p>To view more, visit: <a href='https://freecatphotoapp.com'
+            target='_blank'>cat photos</a></p> <!-- target blank opens in another page, if not, refreshes -->
+            <!-- MAIN PIC -->
+          <div>
+            <a href='https://freecatphotoapp.com'><img id='main-pic' class='smaller-image'
+              src='https://bit.ly/fcc-relaxing-cat' alt='A cute orange cat lying on its back'></a>
+              <!-- the # href makes DEAD LINK -->
+          </div>
+          <p style='background-color:transparent'><a href='#footer'>Jump to Bottom</a></p>
+          <!--p element got style set transparent to contrarrest the class
+          'id' overrides class, regardless declaration time
+          class overrides body element's CSS
+          class declarations order in the <style> section is what is important
+          inline style overrides all CSS declarations in <style>         -->
+          <!-- CONTENT -->
+          <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+            attack your ankles chase the red dot, hairball run catnip eat the grass sniff.
+            Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
+            rip the couch sleep in the sink <i>fluffy fur <b>catnip</b> scratched</i>. Kitty ipsum dolor
+            sit amet, shed everywhere shed everywhere stretching attack your ankles chase
+            the red dot, hairball run catnip eat the grass sniff.</p>
+          <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
+            rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor
+            sit amet, shed everywhere shed everywhere stretching attack your ankles chase
+            the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass
+            rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the
+            sink fluffy fur catnip scratched.</p>
+          <p>Meowwww loved it, hated it, loved it, hated it yet spill litter big box, scratch
+            at owner, destroy all furniture, especially couch or lay on arms while you're
+            using the keyboard. Missing until dinner time toy mouse squeak roll <sup>over</sup>. With
+            tail in the air lounge in doorway. Man running from cops stops to pet cats,
+            goes to jail.</p>
+          <p class='red-text'>Intently stare at the same spot poop in the plant pot but kitten is playing
+            with dead mouse. Get video posted to internet for chasing red dot leave fur
+            on owners clothes meow to be let out and mesmerizing birds leave fur on owners
+            clothes or favor packaging over toy so purr for no reason. Meow to be let out
+            play time intently sniff hand run outside as soon as door <sub>open</sub> yet destroy
+            couch.</p>
+          <hr/>
+          <div style='font-family: monospace'>
+            <section id="left">
+              <h2>Things cats love:</h2>
+              <ul>
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+              </ul>
+            </section>
+            <aside id="right">
+              <h2>Top 3 things cats hate:</h2>
+              <ol>
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+              </ol>
+            </aside>
+          </div>
+
+          <form action='https://freecatphotoapp.com/submit-cat-photo' id='cat-photo-form'>
+            <!-- indoor input needs value or it sets to default 'on';
+            checked attribute added to buttons to be checked by default;
+            checkboxes can be multiple options at the same time
+            radio buttons are boolean -->
+            <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"
+              value="indoor" checked> Indoor</label>
+            <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"
+              value="outdoor"> Outdoor</label><br>
             <label for="loving"><input id="loving" type="checkbox" name="personality"
               value="loving" checked> Loving</label>
-              <label for="lazy"><input id="lazy" type="checkbox" name="personality"
-                value="lazy"> Lazy</label>
-                <label for="energetic"><input id="energetic" type="checkbox" name="personality"
-                  value="energetic"> Energetic</label><br>
+            <label for="lazy"><input id="lazy" type="checkbox" name="personality"
+              value="lazy"> Lazy</label>
+            <label for="energetic"><input id="energetic" type="checkbox" name="personality"
+              value="energetic"> Energetic</label><br>
 
-                  <input type="text" placeholder="cat photo URL" required>
-                  <button type="submit">Submit</button>
-
-      </form>
-      <br><br>
-      <div>
-        <form id="searchbar">
+            <input type="text" placeholder="cat photo URL" required>
+            <button type="submit">Submit</button>
+          </form>
+          <br><br>
+          <div id='js'>
+            <p>How Many Lines (From 0 to 250) <br /><br />
+              <input type='text' id='txt_lines' /><br /><br />
+              <input type='button' value='Go' id='button'/>
+            </p>
+            <canvas width='750' height='750' id='board'></canvas>
+            <p>Así queda</p>
+            <script src='CatPhotoApp.js'></script>
+          </div>
+        </main>
+      </div>
+      <div class='footer'>
+        <div class='fullCard' id='thumbnail'>
+          <div class='cardContent'>
+            <div class='cardText'>
+              <h4><s>Google</s>Alphabet</h4>
+              <hr>
+              <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
+            </div>
+            <div class='cardLinks'>
+              <a href='https://en.wikipedia.org/wiki/Larry_Page' target='_blank'>Larry Page</a><br><br>
+              <a href='https://en.wikipedia.org/wiki/Sergey_Brin' target='_blank'>Sergey Brin</a>
+            </div>
+          </div>
+        </div>
+        <div align="right" id="searchbar" >
+        <form>
           <label for="search">Search:</label>
           <input type="search" id="search" name="search">
           <input type="submit" name="submit" value="Go!">
         </form>
       </div>
-
-    </main>
-
-    <div class="fullCard" id='thumbnail'>
-      <div class="cardContent">
-        <div class="cardText">
-          <h4><s>Google</s>Alphabet</h4>
-          <hr>
-          <p><em>Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.</em></p>
-        </div>
-        <div class="cardLinks">
-          <a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a><br><br>
-          <a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
-        </div>
       </div>
     </div>
-
-    <footer id='footer'>Copyright Cat Photo App</footer>
-
-
   </body>
+  <footer id='footer'>Copyright Cat Photo App</footer>
 </html>

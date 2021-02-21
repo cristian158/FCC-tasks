@@ -3,11 +3,11 @@ body{
   background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png');*/
   opacity: 1;
 }
-a {
-  color: #b2e1d8; /*watery soft greenish*/
-}
-a:hover {
-  color: red;
+P {
+  font-size: 16px;
+  font-family: monospace;
+  padding: 23px;
+  background-color: rgba(224, 245, 241, 0.5); /* == #e0f5f1, white green*/
 }
 h1 {
   color: blue;
@@ -17,6 +17,11 @@ h1 {
   padding: 8px;
   background-color: rgba(18,70,60,0.4);
 }
+h2 {
+  font-size: 22px;
+  font-family: monospace;
+  padding: 23px;
+}
 h4 {
   text-align: center;
   background-color: rgba(45, 45, 45, 0.1);
@@ -24,25 +29,35 @@ h4 {
   font-size: 27px;
   text-transform: uppercase;
 }
-P {
-  font-size: 16px;
-  font-family: monospace;
-  padding: 23px;
-  background-color: rgba(224, 245, 241, 0.5); /* == #e0f5f1, white green*/
+ul {
+  color: rgba(18,70,60,1);
 }
 nav ul {
   margin: 0px;
   padding: 5px 0px 5px 30px;
 }
+li {
+  font-size: 14px;
+  color: rgba(0,0,0,0.7);
+  font-
+}
 nav li {
   display: inline;
   margin-right: 20px;
 }
+a {
+  color: rgba(18,70,60,0.4); /*watery soft greenish*/
+  text-decoration: none;
+}
+a:hover {
+  color: #c50d2f;
+}
+
 .ball {
   width: 40px;
   height: 40px;
   margin: 50 auto;
-  position: fixed;
+  position: absolute;
   background: linear-gradient(35deg, #ccffff, #ffcccc);
   border-radius: 50%;
 }
@@ -52,13 +67,45 @@ nav li {
 .cardText {
   margin-bottom: 30px;
 }
+.container {
+  font-size: 1.5em;
+  min-height: 300px;
+  width: 100%;
+  background: rgba(224, 245, 241, 0.2);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto 1fr auto;
+  grid-gap: 5px;
+  grid-template-areas:
+  "header"
+  "advert"
+  "content"
+  "footer";
+}
+.content {
+  background: PaleTurquoise;
+  grid-area: content;
+}
+.footer {
+  background: lightpink;
+  grid-area: footer;
+}
 .fullCard {
   background-color: white;
   width: 310px;
   border: 1px solid #ccc; /*grey*/
   border-radius: 5px;
-  margin: auto;
+  margin:  200px 250px 200px 250px;
   padding: 4px;
+  grid-area: footer;
+}
+.header {
+  background: LightSkyBlue;
+  grid-area: header;
+}
+.item2 {
+  background: rgba(255, 185, 100, 0.3);
+  grid-area: advert;
 }
 .red-text {
   color: #c50d2f !important; /* overrides all previous styling rules, use
@@ -72,6 +119,31 @@ nav li {
   color: black;
   opacity: 0.4;
 }
+
+@media (min-width: 300px){
+  .container{
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "advert header"
+      "advert content"
+      "advert footer";
+  }
+}
+@media (min-width: 400px){
+  .container{
+    grid-template-areas:
+      "header header"
+      "advert content"
+      "footer footer";
+  }
+}
+
+/*
+id selector, style only one element unlike classes
+can be used by browser to navigate, unlike with classes
+can be accessed with JS
+*/
 #ball1 {
   left: 20%;
 }
@@ -85,6 +157,9 @@ nav li {
   font-size: 1.4em;
   top: 10px;
 }
+#js {
+  text-align: center;
+}
 #main {
   margin: 0px 250px 0px 250px;
 }
@@ -95,17 +170,17 @@ nav li {
 #navbar {
   position: fixed;
   top: 0px;
-  left: 0px;
+  left: 8px;
+  right: 10px;
   width: 100%;
-  background-color: #767676;
+  background-color: rgba(124, 200, 200, 1);
   font-family: monospace;
   font-size: 1.5em;
 }
 #searchbar {
-  position: absolute;
-  down: 150px;
+  position: relative;
+  down: 300px;
   right: 30px;
-  top: 38px;
 
 }
 #thumbnail{
@@ -121,6 +196,7 @@ nav li {
   width: 49%;
   position: relative;
 }
+
 aside, section {
   padding: 2px;
   background-color: #c6faf1;
