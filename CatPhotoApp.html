@@ -2,7 +2,12 @@
 <html>
   <head>
     <!-- Any markup with information about your page would go into the head-->
-    <meta>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Web about cats'>
+    <meta name='author' content='Cristian'>
+    <meta name='keywords' content='cats, photos, stories'>
+
     <title>Kitty</title>
     <link href='https://fonts.googleapis.com/css?family=Lobster'
     rel='stylesheet' type='text/css'> <!-- imports google font -->
@@ -18,9 +23,9 @@
       <div class='header'>
         <nav id='navbar'>
           <ul>
-            <li><a href="">Home</a></li>
+            <li><a href=''>Home</a></li>
             <li><a href='CatPhotoApp2.html'>Contact</a></li>
-            <li><a href="">Portfolio</a></li>
+            <li><a href=''>Portfolio</a></li>
           </ul>
         </nav>
         <!-- any markup with the content of the page (displayed for user) goes here -->
@@ -35,7 +40,7 @@
             target='_blank'>cat photos</a></p> <!-- target blank opens in another page, if not, refreshes -->
             <!-- MAIN PIC -->
           <div>
-            <a href='https://freecatphotoapp.com'><img id='main-pic' class='smaller-image'
+            <a href='https://freecatphotoapp.com'><img title='Meow!' id='main-pic' class='smaller-image'
               src='https://bit.ly/fcc-relaxing-cat' alt='A cute orange cat lying on its back'></a>
               <!-- the # href makes DEAD LINK -->
           </div>
@@ -46,7 +51,7 @@
           class declarations order in the <style> section is what is important
           inline style overrides all CSS declarations in <style>         -->
           <!-- CONTENT -->
-          <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+          <p>Kitty ipsum dolor sit <del>amet</del>, shed everywhere shed everywhere stretching
             attack your ankles chase the red dot, hairball run catnip eat the grass sniff.
             Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
             rip the couch sleep in the sink <i>fluffy fur <b>catnip</b> scratched</i>. Kitty ipsum dolor
@@ -54,13 +59,13 @@
             the red dot, hairball run catnip eat the grass sniff.</p>
           <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere
             rip the couch sleep in the sink fluffy fur catnip scratched. Kitty ipsum dolor
-            sit amet, shed everywhere shed everywhere stretching attack your ankles chase
+            sit amet, shed <mark>everywhere</mark> shed everywhere stretching attack your ankles chase
             the red dot, hairball run catnip eat the grass sniff. Purr jump eat the grass
             rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the
             sink fluffy fur catnip scratched.</p>
           <p>Meowwww loved it, hated it, loved it, hated it yet spill litter big box, scratch
             at owner, destroy all furniture, especially couch or lay on arms while you're
-            using the keyboard. Missing until dinner time toy mouse squeak roll <sup>over</sup>. With
+            using the <ins>keyboard</ins>. Missing until dinner time toy mouse squeak roll <sup>over</sup>. With
             tail in the air lounge in doorway. Man running from cops stops to pet cats,
             goes to jail.</p>
           <p class='red-text'>Intently stare at the same spot poop in the plant pot but kitten is playing
@@ -69,8 +74,14 @@
             clothes or favor packaging over toy so purr for no reason. Meow to be let out
             play time intently sniff hand run outside as soon as door <sub>open</sub> yet destroy
             couch.</p>
-          <hr/>
-          <div style='font-family: monospace'>
+            <p align='center'> <iframe  width="560" height="315" src="https://www.youtube.com/embed/pQN-pnXPaVg"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+          </video>
+
+          <!-- LISTS -->
+          <div id='lists' style='font-family: monospace'>
             <section id="left">
               <h2>Things cats love:</h2>
               <ul>
@@ -81,14 +92,14 @@
             </section>
             <aside id="right">
               <h2>Top 3 things cats hate:</h2>
-              <ol>
+              <ol type='a'> <!-- type: I/i (roman nrs), 1 (default),-->
                 <li>flea treatment</li>
                 <li>thunder</li>
                 <li>other cats</li>
               </ol>
             </aside>
           </div>
-
+          <hr/>
           <form action='https://freecatphotoapp.com/submit-cat-photo' id='cat-photo-form'>
             <!-- indoor input needs value or it sets to default 'on';
             checked attribute added to buttons to be checked by default;
@@ -108,7 +119,6 @@
             <input type="text" placeholder="cat photo URL" required>
             <button type="submit">Submit</button>
           </form>
-          <br><br>
           <div id='js'>
             <p>How Many Lines (From 0 to 250) <br /><br />
               <input type='text' id='txt_lines' /><br /><br />

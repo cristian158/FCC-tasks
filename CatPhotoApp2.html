@@ -2,7 +2,12 @@
 <html>
   <head>
     <!-- Any markup with information about your page would go into the head-->
-    <meta>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Web about cats'>
+    <meta name='author' content='Cristian'>
+    <meta name='keywords' content='cats, photos, stories'>
+
     <title>Kitty</title>
     <link href='https://fonts.googleapis.com/css?family=Lobster'
     rel='stylesheet' type='text/css'> <!-- imports google font -->
@@ -11,12 +16,10 @@
     Not need quotes because they are CSS keywords.
     magenta	hsl(300, 100%, 50%) (color wheel, amount of grey amount of white,)
     background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);-->
-
     <link rel='stylesheet' type='text/css' href='CatPhotoApp.css'>
-
   </head>
   <body>
-    <div class='container'>
+    <div class='container'> <!-- block containers unlike spans (inline containers) -->
       <div class='header'>
         <nav id='navbar'>
           <ul>
@@ -32,8 +35,8 @@
       <div class='content'>
         <main id='main'>
           <p style='background-color:transparent'><a href='#footer'>Jump to Bottom</a></p>
-          <div style='font-family: monospace'>
-            <section id="left"> <!-- LISTS -->
+          <div style='font-family: monospace'> <!-- LISTS -->
+            <section id="left">
               <p>Things cats love:</p>
               <ul>
                 <li>cat nip</li>
@@ -50,6 +53,28 @@
               </ol>
             </aside>
           </div>
+          <div id='table'>
+            <table>
+              <caption>
+                <tr>
+                  <th>N1</th>
+                  <th>N2</th>
+                  <th>N3</th>
+                </tr>
+                <tr>
+                  <td>One</td>
+                  <td>Two</td>
+                  <td>Three</td>
+                </tr>
+                <tr>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>C</td>
+                </tr>
+
+              </caption>
+            </table>
+          </div>
 
           <form action='https://freecatphotoapp.com/submit-cat-photo' id='cat-photo-form'>
             <!-- indoor input needs value or it sets to default 'on';
@@ -65,10 +90,14 @@
             <label for="lazy"><input id="lazy" type="checkbox" name="personality"
               value="lazy"> Lazy</label>
             <label for="energetic"><input id="energetic" type="checkbox" name="personality"
-              value="energetic"> Energetic</label><br>
+              value="energetic"> Energetic</label><br/>
 
             <input type="text" placeholder="cat photo URL" required>
+            <button type="submit">Submit</button> <hr>
+            <input type="password" placeholder="Password">
             <button type="submit">Submit</button>
+            <hr>
+            <textarea name='name' rows="8" cols='80' placeholder='Write a long answer'></textarea>
           </form>
           <br><br>
           <div id='js'>
@@ -80,16 +109,17 @@
             <p>Así queda</p>
             <script src='CatPhotoApp.js'></script>
           </div>
+          <iframe src="https://www.google.com/" width="500" height="500">Sorry m8</iframe>
         </main>
       </div>
       <div class='footer'>
         <div align="right" id="searchbar" >
-        <form>
-          <label for="search">Search:</label>
-          <input type="search" id="search" name="search">
-          <input type="submit" name="submit" value="Go!">
-        </form>
-      </div>
+          <form>
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search">
+            <input type="submit" name="submit" value="Go!">
+          </form>
+        </div>
       </div>
     </div>
   </body>

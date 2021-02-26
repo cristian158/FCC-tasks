@@ -52,6 +52,10 @@ a {
 a:hover {
   color: #c50d2f;
 }
+aside, section {
+  padding: 2px;
+  background-color: #c6faf1;
+}
 
 .ball {
   width: 40px;
@@ -152,10 +156,9 @@ can be accessed with JS
   transform: scale(1.5)
 }
 #cat-photo-form {
-  position: relative;
   font-family: monospace;
   font-size: 1.4em;
-  top: 10px;
+  background-color: green;
 }
 #js {
   text-align: center;
@@ -171,7 +174,7 @@ can be accessed with JS
   position: fixed;
   top: 0px;
   left: 8px;
-  right: 10px;
+
   width: 100%;
   background-color: rgba(124, 200, 200, 1);
   font-family: monospace;
@@ -183,23 +186,28 @@ can be accessed with JS
   right: 30px;
 
 }
+#table {
+  margin-top: 10px;
+  border-top: 2px solid LightSkyBlue;
+  border-bottom: 3px dashed orange;
+  border-left: 1px dotted green;
+  border-right: 4px groove purple;
+
+  top: 5px;
+}
 #thumbnail{
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 #left {
   float: left;
   width: 49%;
-  position: relative;
+}
+#lists {
+  margin-bottom: 100px;
 }
 #right {
   float: right;
   width: 49%;
-  position: relative;
-}
-
-aside, section {
-  padding: 2px;
-  background-color: #c6faf1;
 }
 
 [type='checkbox'] {
