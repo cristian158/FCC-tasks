@@ -1,0 +1,221 @@
+body{
+  background-color: rgba(94,227,238,0.4); /* greenish
+  background: url('https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png');*/
+  opacity: 1;
+}
+P {
+  font-size: 16px;
+  font-family: monospace;
+  padding: 23px;
+  background-color: rgba(224, 245, 241, 0.5); /* == #e0f5f1, white green*/
+}
+h1 {
+  color: blue;
+  font-family: Lobster;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding: 8px;
+  background-color: rgba(18,70,60,0.4);
+}
+h2 {
+  font-size: 22px;
+  font-family: monospace;
+  padding: 23px;
+}
+h4 {
+  text-align: center;
+  background-color: rgba(45, 45, 45, 0.1);
+  padding: 10px;
+  font-size: 27px;
+  text-transform: uppercase;
+}
+ul {
+  color: rgba(18,70,60,1);
+}
+nav ul {
+  margin: 0px;
+  padding: 5px 0px 5px 30px;
+}
+li {
+  font-size: 14px;
+  color: rgba(0,0,0,0.7);
+  font-
+}
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+a {
+  color: rgba(18,70,60,0.4); /*watery soft greenish*/
+  text-decoration: none;
+}
+a:hover {
+  color: #c50d2f;
+}
+aside, section {
+  padding: 2px;
+  background-color: #c6faf1;
+}
+
+.ball {
+  width: 40px;
+  height: 40px;
+  margin: 50 auto;
+  position: absolute;
+  background: linear-gradient(35deg, #ccffff, #ffcccc);
+  border-radius: 50%;
+}
+.cardContent {
+  padding: 10px;
+}
+.cardText {
+  margin-bottom: 30px;
+}
+.container {
+  font-size: 1.5em;
+  min-height: 300px;
+  width: 100%;
+  background: rgba(224, 245, 241, 0.2);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto 1fr auto;
+  grid-gap: 5px;
+  grid-template-areas:
+  "header"
+  "advert"
+  "content"
+  "footer";
+}
+.content {
+  background: PaleTurquoise;
+  grid-area: content;
+}
+.footer {
+  background: lightpink;
+  grid-area: footer;
+}
+.fullCard {
+  background-color: white;
+  width: 310px;
+  border: 1px solid #ccc; /*grey*/
+  border-radius: 5px;
+  margin:  200px 250px 200px 250px;
+  padding: 4px;
+  grid-area: footer;
+}
+.header {
+  background: LightSkyBlue;
+  grid-area: header;
+}
+.item2 {
+  background: rgba(255, 185, 100, 0.3);
+  grid-area: advert;
+}
+.red-text {
+  color: #c50d2f !important; /* overrides all previous styling rules, use
+  only if absolutely necessary*/
+}
+.smaller-image{
+  width: 100px;
+}
+.wikilinks {
+  text-align: left;
+  color: black;
+  opacity: 0.4;
+}
+
+@media (min-width: 300px){
+  .container{
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "advert header"
+      "advert content"
+      "advert footer";
+  }
+}
+@media (min-width: 400px){
+  .container{
+    grid-template-areas:
+      "header header"
+      "advert content"
+      "footer footer";
+  }
+}
+
+/*
+id selector, style only one element unlike classes
+can be used by browser to navigate, unlike with classes
+can be accessed with JS
+*/
+#ball1 {
+  left: 20%;
+}
+#ball2 {
+  left: 65%;
+  transform: scale(1.5)
+}
+#cat-photo-form {
+  font-family: monospace;
+  font-size: 1.4em;
+  background-color: green;
+}
+#js {
+  text-align: center;
+}
+#main {
+  margin: 0px 250px 0px 250px;
+}
+#main-pic{
+  display: block;
+  margin: auto;
+}
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 8px;
+
+  width: 100%;
+  background-color: rgba(124, 200, 200, 1);
+  font-family: monospace;
+  font-size: 1.5em;
+}
+#searchbar {
+  position: relative;
+  down: 300px;
+  right: 30px;
+
+}
+#table {
+  margin-top: 10px;
+  border-top: 2px solid LightSkyBlue;
+  border-bottom: 3px dashed orange;
+  border-left: 1px dotted green;
+  border-right: 4px groove purple;
+
+  top: 5px;
+}
+#thumbnail{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+#left {
+  float: left;
+  width: 49%;
+}
+#lists {
+  margin-bottom: 100px;
+}
+#right {
+  float: right;
+  width: 49%;
+}
+
+[type='checkbox'] {
+  margin: 20px 5px 15px 5px;
+}
+
+/* 'id' is referenced with #
+ Class start with . when declared, not in elements' class attribute
+.smaller-image can be called class='smaller-image' to specify img width
+<img class="class1 class2 class 3">
+*/
