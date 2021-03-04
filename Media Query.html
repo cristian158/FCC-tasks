@@ -2,24 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <style>
-      p {
-        font-size: 20px;
-        width: 75vmin;  /* p stays at 75% of the viewport's smaller dimension (height or width) */
-      }
       h2 {
         width: 80vw; /* h2 stays at 80% of the viewport's width */
       }
 
-      @media (max-height: 800px) { /* when height is 800 or less, change font of p element */
+      p {
+        font-size: 20px;
+        width: 75vmin;  /* p stays at 75% of the viewport's smaller dimension (height or width) */
+      }
+
+      @media (max-height: 400px) { /* when height is 400 or less, change font of p element */
         p {
         font-size: 10px;
         }
       }
 
       .responsive-img {
-        max-width: 100%; /* img never wider than container */
+        max-width: 100%; /* element never wider than container */
         height: auto; /* img keeps original aspect ratio */
       }
 
