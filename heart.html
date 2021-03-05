@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang='en' dir='ltr'>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title></title>
   </head>
   <body>
@@ -9,7 +9,7 @@
       .heart {
         height: 50px;
         width: 50px;
-        background-color: pink;
+        background-color: green;
         position: absolute; /* Position specifies type of positioning method used for an element (static, relative, fixed, absolute or sticky). allows
         to use other properties
         absolute: element is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). */
@@ -21,26 +21,28 @@
         transform: rotate(-45deg);
       }
 
-      .heart::after {
-        background-color: pink;
-        content: "";
-        border-radius: 50%;
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        top: 0px;
-        left: 25px;
-      }
       .heart::before {
-        content: "";
+        content: 'chao'; /* pseudo elements need content to work */
+        width: 50px;
+        height: 50px;
         background-color: pink;
         border-radius: 50%;
         position: absolute;
-        width: 50px;
-        height: 50px;
         top: -25px;
         left: 0px;
       }
+
+      .heart::after {
+        content: 'hola';
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        top: 0px;
+        left: 25px;
+      }
+
     </style>
     <div class="heart"></div>
   </body>
@@ -52,28 +54,17 @@ to add a rectangle to an element with the class heart:
 
 .heart::before {
   content: "";
+  height: 50px;
+  width: 70px;
   background-color: yellow;
   border-radius: 25%;
   position: absolute;
-  height: 50px;
-  width: 70px;
   top: -50px;
   left: 5px;
 }
 To function properly, they must have a defined content property.
 This property is usually used to add things like a photo or text to the selected
 element. When the ::before and ::after pseudo-elements are used to make shapes,
-the content property is still required, but it's set to an empty string. In the
-above example, the element with the class of heart has a ::before pseudo-element
-that produces a yellow rectangle with height and width of 50px and 70px,
-respectively. This rectangle has round corners due to its 25% border-radius and
-is positioned absolutely at 5px from the left and 50px above the top of the element.
+the content property is still required, but it's set to an empty string.
 
-Transform the element on the screen to a heart. In the heart::after selector,
-change the background-color to pink and the border-radius to 50%.
-
-Next, target the element with the class heart (just heart) and fill in the
-transform property. Use the rotate() function with -45 degrees.
-
-Finally, in the heart::before selector, set its content property to an empty
-string.-->
+-->
