@@ -2,10 +2,12 @@
   --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25); /* box shadow*/
   --bsx: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
         0.125em 0.125em 0.25em rgba(0,0,0,.15);
+  --grey: #495057;
+  --light-grey: #ced4da;
 }
 
 body {
-  background-color: rgb(68, 190, 199);
+  background-color: rgb(68, 190, 199); /* fallback */
   background-image: url(services-bg.jpg);
   background-size: cover;
   margin-left: 20px;
@@ -45,6 +47,16 @@ p {
   padding: 1em;
 }
 
+[data-tooltip]:hover::after {
+  content: attr(data-tooltip); /* content is the data-tooltip attribute */
+  position: relative;
+  top: 0; /* so the tooltip will be at the bottom */
+  left: 5px;
+  padding: 4px;
+  background-color: #0ca5aa85;
+  border-radius: 0.5rem;
+}
+
 .form-group {
   margin: 0 auto 1.25rem auto;
   padding: .8rem;
@@ -59,10 +71,10 @@ p {
   width: 50%;
   height: 1.7rem;
   padding: 0.3rem 0.7rem;
-  color: #495057;
-  background-color: #fff;
+  color: var(--grey);
+  background-color: #f2fdfc;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid var(--light-grey);
   border-radius: 0.3rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75em;
@@ -81,7 +93,7 @@ p {
   padding: 0.6rem;
   resize: vertical;
   border-radius: 0.3rem;
-  border: 1px solid #ced4da;
+  border: 1px solid var(--light-grey);
 }
 
 .form-groupa {
@@ -104,8 +116,8 @@ button:hover {
   display: block;
   width: 33%;
   height: 4rem;
-  color: #495050;
-  border: 1px solid #ced4da;
+  color: var(--grey);
+  border: 1px solid var(--light-grey);
   padding: 0.5em;
   cursor: pointer;
   transition: 0.8s;
@@ -148,3 +160,29 @@ button:hover {
     width: 50%;
   }
 }
+
+
+/*
+
+body {
+  background-color: rgb(68, 190, 199);		#44bec7		greenish
+}
+
+.container {
+  background-color: rgba(68, 190, 250, 0.5);	#44befa50	blueish 50%
+}
+
+[data-tooltip]:hover::after {
+  background-color: #0ca5aa85;					greenish dark 85%
+}
+
+
+button:hover {
+  background-color: #0ca5aa;					greenish dark
+}
+
+.submit-butt {
+  background-color: #0ca5aa85;					greenish dark 85%
+}
+
+*/

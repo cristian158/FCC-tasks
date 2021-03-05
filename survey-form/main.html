@@ -20,21 +20,21 @@
         <form id='survey-form' class='form' action='' method='post'> <!-- action: where to send data -->
 
           <div class='form-group'>
-            <p>Name</p>
+            <p data-tooltip='Required'>Name</p>
             <label for='name' id='name-label'>
               <input type='text' name='name' id='name' class='form-control' placeholder='Tell me your name' required>
             </label>
           </div>
 
           <div class='form-group'>
-            <p>E-mail</p>
+            <p data-tooltip='Required'>E-mail</p>
             <label for='email' id='email-label'>
               <input type='email' name='email' id='email' class='form-control' placeholder='Tell me your e-mail' minlength='8' maxlength='60' required>
             </label>
           </div>
 
           <div class='form-group'>
-            <p>Age</p>
+            <p data-tooltip='Required'>Age</p>
             <label for='age' id='number-label'>
               <input type='number' name='age' id='number' class='form-control' placeholder='Tell me your Age' min='9' max='120' required>
             </label>
