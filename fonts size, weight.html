@@ -1,15 +1,22 @@
-fixed and absolute positions is that an element with a fixed position
-won't move when the user scrolls.
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang='en' dir='ltr'>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <title></title>
     <style>
+      a {
+        color: #000;
+      }
+
+      a:hover {
+        color: red;
+      } /*pseudo class, is added to selectors to specify a state */
+
       h1 {
         font-size: 68px;
         font-weight: 800;
       }
+
       h2 {
         font-size: 52px;
         font-weight: 600;
@@ -17,45 +24,47 @@ won't move when the user scrolls.
         top: 45px; /*use a CSS offset to move it 15 pixels away from the top of
         where it sits in the normal flow.*/
       }
+
       h3 {
         font-size: 40px;
         font-weight: 500;
       }
+
       h4 {
         font-size: 32px;
         font-weight: 400;
       }
+
       h5 {
         font-size: 21px;
         font-weight: 300;
       }
+
       h6 {
         font-size: 14px;
         font-weight: 200;
       }
+
       p {
         font-size: 16px;
         line-height: 25px;
       }
-      a {
-        color: #000;
+
+      section {
+        position: relative; /* so the section bar stays under de p element */
       }
-      a:hover {
-        color: red;
-      } /*pseudo class, is added to selectors to specify a state */
+
       #searchbar {
         position: absolute;
         top: 50px;
         right: 50px;
-      }
-      section {
-        position: relative;
+        padding-bottom: 20px;
       }
     </style>
 
   </head>
   <body>
-    <a href="https://freecatphotoapp.com/" target="_blank">Hover</a>
+    <a href='https://freecatphotoapp.com/' target='_blank'>Hover</a>
     <h1>This is h1 text</h1>
     <h2>This is h2 text</h2>
     <h3>This is h3 text</h3>
@@ -70,10 +79,10 @@ won't move when the user scrolls.
       cillum dolore eu fugiat nulla pariatur.
     </p>
     <section>
-      <form id="searchbar">
-        <label for="search">Search:</label>
-        <input type="search" id="search" name="search">
-        <input type="submit" name="submit" value="Go!">
+      <form id='searchbar'>
+        <label for='search'>Search:</label>
+        <input type='search' id='search' name='search'>
+        <input type='submit' name='submit' value='Go!'>
       </form>
     </section>
   </body>

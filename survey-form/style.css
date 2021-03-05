@@ -14,23 +14,23 @@ body {
   font-size: 1.6em;
 }
 
-p {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0 0 10px 0;
-  font-size:
-}
-
-h1 {
-    margin: 0;
-    padding: 0.1em;
-}
-
 .container {
   margin: 0.5em;
   padding: 2rem;
   background-color: rgba(68, 190, 250, 0.5);
   border-radius: 0.8rem;
   box-shadow: var(--bsx);
+}
+
+h1 {
+  margin: 0;
+  padding: 0.1em;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 10px 0;
+  font-size:
 }
 
 #title {
@@ -54,13 +54,6 @@ h1 {
   box-shadow: var(--bs);
 }
 
-.input-checkbox, .input-radio {
-  display: inline-block;
-  margin-right: 0.6rem;
-  min-height: 1.2rem;
-  min-width: 1.2rem;
-}
-
 .form-control {
   display: block;
   width: 50%;
@@ -73,6 +66,13 @@ h1 {
   border-radius: 0.3rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.75em;
+}
+
+.input-checkbox, .input-radio {
+  display: inline-block;
+  margin-right: 0.6rem;
+  min-height: 1.2rem;
+  min-width: 1.2rem;
 }
 
 .input-textarea {
