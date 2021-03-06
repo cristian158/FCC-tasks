@@ -7,7 +7,7 @@
     <meta name='description' content='Web about cats'>
     <meta name='author' content='Cristian'>
     <meta name='keywords' content='cats, photos, stories'>
-
+    <script src='CatPhotoApp.js' defer></script>
     <title>Kitty</title>
     <link href='https://fonts.googleapis.com/css?family=Lobster'
     rel='stylesheet' type='text/css'> <!-- imports google font -->
@@ -34,13 +34,15 @@
       <div class='item2'>advert</div>
       <div class='content'>
         <main id='main'>
-          <div class='ball' id='ball1'></div>
-          <div class='ball' id='ball2'></div>
+          <div class="balls">
+            <div class='ball' id='ball1'></div>
+            <div class='ball' id='ball2'></div>
+          </div>
           <p>To view more, visit: <a href='https://freecatphotoapp.com'
             target='_blank'>cat photos</a></p> <!-- target blank opens in another page, if not, refreshes -->
             <!-- MAIN PIC -->
           <div>
-            <a href='https://freecatphotoapp.com'><img title='Meow!' id='main-pic' class='smaller-image'
+            <a href='https://freecatphotoapp.com'><img title='Meow!' id='main-pic'
               src='https://bit.ly/fcc-relaxing-cat' alt='A cute orange cat lying on its back'></a>
               <!-- the # href makes DEAD LINK -->
           </div>
@@ -74,11 +76,11 @@
             clothes or favor packaging over toy so purr for no reason. Meow to be let out
             play time intently sniff hand run outside as soon as door <sub>open</sub> yet destroy
             couch.</p>
-            <p align='center'> <iframe  width="560" height="315" src="https://www.youtube.com/embed/pQN-pnXPaVg"
+          <!-- video -->
+            <p align='center'> <iframe  width='560' height='315' src='https://www.youtube.com/embed/pQN-pnXPaVg'
             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
             gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-          </video>
 
           <!-- LISTS -->
           <div id='lists' style='font-family: monospace'>
@@ -99,7 +101,6 @@
               </ol>
             </aside>
           </div>
-          <hr/>
           <form action='https://freecatphotoapp.com/submit-cat-photo' id='cat-photo-form'>
             <!-- indoor input needs value or it sets to default 'on';
             checked attribute added to buttons to be checked by default;
@@ -116,17 +117,15 @@
             <label for="energetic"><input id="energetic" type="checkbox" name="personality"
               value="energetic"> Energetic</label><br>
 
-            <input type="text" placeholder="cat photo URL" required>
-            <button type="submit">Submit</button>
+            <input type='text' placeholder='cat photo URL' required>
+            <button type='submit' class='button'>Submit</button>
           </form>
           <div id='js'>
-            <p>How Many Lines (From 0 to 250) <br /><br />
-              <input type='text' id='txt_lines' /><br /><br />
-              <input type='button' value='Go' id='button'/>
-            </p>
+            <p>How Many Lines (From 0 to 250)</p>
+            <input type='text' id='txt_lines'>
+            <input type='button' value='Go' id='button'>
             <canvas width='750' height='750' id='board'></canvas>
             <p>Así queda</p>
-            <script src='CatPhotoApp.js'></script>
           </div>
         </main>
       </div>
@@ -144,13 +143,13 @@
             </div>
           </div>
         </div>
-        <div align="right" id="searchbar" >
-        <form>
-          <label for="search">Search:</label>
-          <input type="search" id="search" name="search">
-          <input type="submit" name="submit" value="Go!">
-        </form>
-      </div>
+        <div align='right' id='searchbar'>
+          <form>
+            <label for='search'>Search:</label>
+            <input type='search' id='search' name='search'>
+            <input type='submit' name='submit' value='Go!'>
+          </form>
+        </div>
       </div>
     </div>
   </body>

@@ -29,48 +29,6 @@ h4 {
   font-size: 27px;
   text-transform: uppercase;
 }
-ul {
-  color: rgba(18,70,60,1);
-}
-nav ul {
-  margin: 0px;
-  padding: 5px 0px 5px 30px;
-}
-li {
-  font-size: 14px;
-  color: rgba(0,0,0,0.7);
-  font-
-}
-nav li {
-  display: inline;
-  margin-right: 20px;
-}
-a {
-  color: rgba(18,70,60,0.4); /*watery soft greenish*/
-  text-decoration: none;
-}
-a:hover {
-  color: #c50d2f;
-}
-aside, section {
-  padding: 2px;
-  background-color: #c6faf1;
-}
-
-.ball {
-  width: 40px;
-  height: 40px;
-  margin: 50 auto;
-  position: absolute;
-  background: linear-gradient(35deg, #ccffff, #ffcccc);
-  border-radius: 50%;
-}
-.cardContent {
-  padding: 10px;
-}
-.cardText {
-  margin-bottom: 30px;
-}
 .container {
   font-size: 1.5em;
   min-height: 300px;
@@ -86,42 +44,189 @@ aside, section {
   "content"
   "footer";
 }
-.content {
-  background: PaleTurquoise;
-  grid-area: content;
-}
-.footer {
-  background: lightpink;
-  grid-area: footer;
-}
-.fullCard {
-  background-color: white;
-  width: 310px;
-  border: 1px solid #ccc; /*grey*/
-  border-radius: 5px;
-  margin:  200px 250px 200px 250px;
-  padding: 4px;
-  grid-area: footer;
-}
+
 .header {
   background: LightSkyBlue;
   grid-area: header;
 }
-.item2 {
-  background: rgba(255, 185, 100, 0.3);
-  grid-area: advert;
+
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 8px;
+  width: 100%;
+  background-color: rgba(124, 200, 200, 1);
+  font-family: monospace;
+  font-size: 1.5em;
 }
+
+ul {
+  color: rgba(18,70,60,1);
+}
+
+nav ul {
+  margin: 0px;
+  padding: 5px 0px 5px 30px;
+}
+
+li {
+  font-size: 14px;
+  color: rgba(0,0,0,0.7);
+  font-
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+a {
+  color: rgba(18,70,60,0.4); /*watery soft greenish*/
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c50d2f;
+}
+
 .red-text {
   color: #c50d2f !important; /* overrides all previous styling rules, use
   only if absolutely necessary*/
 }
-.smaller-image{
+
+.item2 {
+  background: rgba(255, 185, 100, 0.3);
+  grid-area: advert;
+}
+
+.content {
+  background: PaleTurquoise;
+  grid-area: content;
+}
+
+#main {
+  margin: 0px 250px 0px 250px;
+}
+
+.balls {
+    background-color: red;
+}
+
+.ball {
+  width: 40px;
+  height: 40px;
+  margin: 50 auto;
+  position: absolute;
+  background: linear-gradient(35deg, #ccffff, #ffcccc);
+  border-radius: 50%;
+}
+
+#ball1 {
+  left: 60%;
+}
+#ball2 {
+  left: 65%;
+  transform: scale(1.5)
+}
+
+#main-pic{
+  display: block;
+  margin: auto;
   width: 100px;
 }
-.wikilinks {
+
+#lists {
+  margin-bottom: 210px;
+}
+
+aside, section {
+  padding: 2px;
+  background-color: #c6faf1;
+}
+
+#left {
+  float: left;
+  width: 49%;
+}
+
+#right {
+  float: right;
+  width: 49%;
+}
+
+
+#cat-photo-form {
+  font-family: monospace;
+  font-size: 1.4em;
+  background-color: green;
+  padding: 1em;
+}
+
+[type='checkbox'] {
+  margin: 20px 5px 15px 5px;
+  cursor: pointer;
+}
+
+[type='checkbox']:hover input  {
+  color: blue;
+}
+
+#js {
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;*/
+
+}
+
+#txt_lines {
+  /* margin-bottom: 5px; */
+}
+
+#board {
+  margin-top: 2em;
+  border: 5px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.footer {
+  background: lightpink;
+  grid-area: footer;
+}
+
+.fullCard {
+  background-color: white;
+  width: 310px;
+  border-radius: 5px;
+  border: 1px solid #ccc; /*grey*/
+  margin:  200px 250px 200px 250px;
+  padding: 4px;
+  grid-area: footer;
+}
+
+#thumbnail{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.cardContent {
+  padding: 10px;
+}
+
+.cardText {
+  margin-bottom: 30px;
+}
+
+.cardLinks {
   text-align: left;
   color: black;
   opacity: 0.4;
+}
+
+#searchbar {
+  position: relative;
+  down: 300px;
+  right: 30px;
 }
 
 @media (min-width: 300px){
@@ -148,71 +253,6 @@ id selector, style only one element unlike classes
 can be used by browser to navigate, unlike with classes
 can be accessed with JS
 */
-#ball1 {
-  left: 20%;
-}
-#ball2 {
-  left: 65%;
-  transform: scale(1.5)
-}
-#cat-photo-form {
-  font-family: monospace;
-  font-size: 1.4em;
-  background-color: green;
-}
-#js {
-  text-align: center;
-}
-#main {
-  margin: 0px 250px 0px 250px;
-}
-#main-pic{
-  display: block;
-  margin: auto;
-}
-#navbar {
-  position: fixed;
-  top: 0px;
-  left: 8px;
-
-  width: 100%;
-  background-color: rgba(124, 200, 200, 1);
-  font-family: monospace;
-  font-size: 1.5em;
-}
-#searchbar {
-  position: relative;
-  down: 300px;
-  right: 30px;
-
-}
-#table {
-  margin-top: 10px;
-  border-top: 2px solid LightSkyBlue;
-  border-bottom: 3px dashed orange;
-  border-left: 1px dotted green;
-  border-right: 4px groove purple;
-
-  top: 5px;
-}
-#thumbnail{
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-#left {
-  float: left;
-  width: 49%;
-}
-#lists {
-  margin-bottom: 100px;
-}
-#right {
-  float: right;
-  width: 49%;
-}
-
-[type='checkbox'] {
-  margin: 20px 5px 15px 5px;
-}
 
 /* 'id' is referenced with #
  Class start with . when declared, not in elements' class attribute

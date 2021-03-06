@@ -1,9 +1,9 @@
-var text = document.getElementById("txt_lines");
-var button = document.getElementById("button");
-button.addEventListener("click", dibujoPorClick);
+var text = document.getElementById('txt_lines');
+var button = document.getElementById('button');
+button.addEventListener('click', dibujoPorClick);
 
-var d = document.getElementById("board");
-var canva = d.getContext("2d");
+var d = document.getElementById('board');
+var canva = d.getContext('2d');
 var width = d.width;
 
 function dibujarLinea(color, xi, yi, xf, yf)
