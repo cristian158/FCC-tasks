@@ -1,0 +1,22 @@
+header {
+  position: fixed;
+  background-color: grey;
+  width: 100%;
+}
+
+.container {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: block;
+}
+
+@media (min-width: 350px) {
+  p {
+    font-size: 2em;
+  }
+
+}
