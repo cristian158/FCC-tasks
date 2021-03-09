@@ -107,6 +107,7 @@ p {
 
 button:hover {
   background-color: #0CA5AA;
+  transform: scale(1.1);
 }
 
 .submit-butt {
