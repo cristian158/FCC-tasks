@@ -2,116 +2,139 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="/normalize.css" rel="stylesheet">
     <title></title>
+    <style>
+    body {
+      margin: 0 auto;
+    }
+    div {
+      height: 40px;
+      width: 70%;
+      background: black;
+      margin: 50px auto;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    button {
+      border-radius: 5px;
+      color: white;
+      background-color: #0F5897;
+      padding: 5px 10px 8px 10px;
+    }
+
+    button:hover {
+      animation-name: background-color;
+      animation-duration: 500ms;
+      animation-fill-mode: forwards;
+    }
+
+    #rect {
+      animation-name: rainbow;
+      animation-duration: 4s;
+    }
+
+    @keyframes rainbow {
+      0% {
+        background-color: blue;
+        top: 0px;
+        left: 0px;
+      }
+      50% {
+        background-color: green;
+        top: 50px;
+        left: 25px;
+      }
+      100% {
+        background-color: yellow;
+        top: 0px;
+        left: -25px;
+      }
+    }
+
+    @keyframes background-color {
+      100% {
+        background-color: #4791d0;
+      }
+    }
+
+    #ball {
+      width: 70px;
+      height: 70px;
+      margin: 50px auto;
+      position: fixed;
+      left: 20%;
+      border-radius: 50%;
+      background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+      );
+      animation-name: fade;
+      animation-duration: 3s;
+    }
+
+    @keyframes fade {
+      50% {
+        left: 60%;
+        opacity: 0.1;
+      }
+    }
+
+    #ball2 {
+      width: 100px;
+      height: 100px;
+      margin: 50px auto;
+      position: relative;
+      border-radius: 50%;
+      background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+      );
+      animation-name: bounce;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes bounce{
+      0% {
+        top: 0px;
+      }
+      50% {
+        top: 249px;
+        width: 130px;
+        height: 70px;
+      }
+      100% {
+        top: 0px;
+      }
+    }
+
+
+  </style>
   </head>
   <body>
-    <style>
-      div {
-          height: 40px;
-          width: 70%;
-          background: black;
-          margin: 50px auto;
-          border-radius: 5px;
-          position: relative;
-      }
 
-      button {
-        border-radius: 5px;
-        color: white;
-        background-color: #0F5897;
-        padding: 5px 10px 8px 10px;
-      }
+    <svg width='1000' height='250'>
+      <rect width='150' height='150' fill='green'>
+        <animate attributeName='x' from='0' to='300'
+        dur='3s' fill='freeze' repeatCount='2'/>
+        <!-- animate to create animations
+        attributeName: which attribute will be affected
+        from: starting value of the attribute
+        to: ending value of the attribute
+        dur: duration
+        fill= 'remove' (resets the value)| 'freeze' (keeps the 'to value') whether or not the attribute's value should return to its initial value when the animation is finished
+        repeatCount: repeat count of the animation-->
+      </rect>
+    </svg>
 
-      button:hover {
-        animation-name: background-color;
-        animation-duration: 500ms;
-        animation-fill-mode: forwards;
-      }
+    <svg width='250' height='250'>
+      <circle cx='80' cy='80' r='50' fill='green' stroke>
+      </svg>
 
-      #rect {
-        animation-name: rainbow;
-        animation-duration: 4s;
-      }
-
-      @keyframes rainbow {
-        0% {
-          background-color: blue;
-          top: 0px;
-          left: 0px;
-        }
-        50% {
-          background-color: green;
-          top: 50px;
-          left: 25px;
-        }
-        100% {
-          background-color: yellow;
-          top: 0px;
-          left: -25px;
-        }
-      }
-
-      @keyframes background-color {
-        100% {
-          background-color: #4791d0;
-        }
-      }
-
-      #ball {
-        width: 70px;
-        height: 70px;
-        margin: 50px auto;
-        position: fixed;
-        left: 20%;
-        border-radius: 50%;
-        background: linear-gradient(
-          35deg,
-          #ccffff,
-          #ffcccc
-        );
-        animation-name: fade;
-        animation-duration: 3s;
-      }
-
-      @keyframes fade {
-        50% {
-          left: 60%;
-          opacity: 0.1;
-        }
-      }
-
-      #ball2 {
-        width: 100px;
-        height: 100px;
-        margin: 50px auto;
-        position: relative;
-        border-radius: 50%;
-        background: linear-gradient(
-          35deg,
-          #ccffff,
-          #ffcccc
-        );
-        animation-name: bounce;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-      }
-
-      @keyframes bounce{
-        0% {
-          top: 0px;
-        }
-        50% {
-          top: 249px;
-          width: 130px;
-          height: 70px;
-        }
-        100% {
-          top: 0px;
-        }
-      }
-
-
-    </style>
     <div id="rect"></div>
 
     <button>Register</button>
@@ -119,5 +142,17 @@
     <div id="ball"></div>
 
     <div id="ball2"></div>
+
+    <svg width='500' height='500'>
+      <path d='M 0 0 L200 200 L200 0 Z' style='stroke:#000; fill:none;' >
+        <!-- defines a path
+      M: places virtual pen at 0 0
+      L200 200: moves 200 down, 200 to the right
+      L200 0: moves to 200, 0
+      Z: closes the shape
+      style: stroke:color;
+      -->
+    </svg>
+
   </body>
 </html>
