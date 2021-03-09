@@ -6,13 +6,15 @@
     <title>Sk8!</title>
     <link rel='stylesheet' href='styles.css'>
     <link href="/normalize.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Poiret+One&display=swap" rel="stylesheet">
   </head>
   <body>
     <header id='header'>
-      <div class=''>
+      <div class='nav-bar'>
         <img src='' alt='company logo' id='header-img'>
       </div>
-      <nav id='nav-bar'>
+      <nav class='nav-bar'>
         <ul class='nav-link'>
           <li class='nav-link'><a href='#sectiona'>Preview</a></li>
           <li class='nav-link'><a href='#sectionb'>NavElement2</a></li>
@@ -22,7 +24,7 @@
       </nav>
 
     </header>
-    <div class='container'>
+    <article class='container'>
       <section class='section' id='preview'>
         <h1>Let's see something:</h1>
         <iframe id='video' width='560' height='315' src='https://www.youtube.com/embed/Vm2GqrP_C6k' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
@@ -38,10 +40,10 @@
       </section>
 
 
-    </div>
-
+    </article>
     <footer>
        <form id='form' class='form' action='https://www.freecodecamp.com/email-submit'> <!-- <input> <label> <select> <textarea> <button> <fieldset> <legend> <datalist> <output> <option> <optgroup> -->
+         <h1>Contact Us NOW!</h1>
          <label for='name'>Name</label>
           <input type='text' id='name' name='' placeholder='Tell me your name'>
          <label for='email'>E-mail</label>

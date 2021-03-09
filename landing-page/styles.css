@@ -1,12 +1,65 @@
+body {
+  margin: 0;
+  background-color: #f4fcfe;
+  /* display: flex;
+  flex-direction: column; */
+  grid-template-areas:
+    'header'
+    'article'
+    'footer'
+}
 header {
   position: fixed;
-  background-color: grey;
+  background-color: #caeaee;
   width: 100%;
-  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  font-family: 'Poiret One', cursive;
+  font-size: 1.4em;
+  color: #342666;
+  text-decoration: none;
+  /* background-color: green; */
+  padding: 1em;
+}
+
+a:hover {
+  color: #e51a2f;
+}
+
+h1 {
+  font-family: 'Fascinate', cursive;
+  font-size: 3em;
+}
+
+p {
+  font-family: 'Poiret One', cursive;
+}
+
+.nav-bar {
+  padding-left: 2em;
 }
 
 ul {
   padding: 10px;
+}
+
+li {
+  /* padding: 1em; */
+  display: inline;
+}
+
+article {
+  max-width: 700px;
+  margin: 0 20em;
+  padding: 2em;
+}
+
+#video {
+  /* margin-right: 1em; */
 }
 
 .container {
@@ -16,6 +69,34 @@ ul {
 }
 
 .section {
+  display: block;
+  margin: 4em;
+  text-align: center;
+  max-width: 660px;
+}
+
+footer {
+  max-width: 700px;
+  margin: 0 20em;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+label, input {
+  display: flex;
+  justify-content: center;
+  /* padding: 2em; */
+  margin-top: .5em;
+  font-family: 'Poiret One', cursive;
+  font-size: 1.4em;
+}
+
+input {
+  margin: 1em;
+}
+
+#submit {
   display: block;
 }
 
