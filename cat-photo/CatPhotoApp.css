@@ -115,6 +115,7 @@ button {
 
 button:hover {
   color: #c50d2f; /* rojo */
+  transform: scale(1.2);
 }
 
 a {
