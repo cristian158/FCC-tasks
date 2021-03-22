@@ -129,6 +129,10 @@ a {
   color: rgba(var(--purplish),0.4);
 }
 
+a:hover {
+  color: rgba(var(--purplish),0.8);
+}
+
 .red-text {
   color: #c50d2f !important; /* overrides all previous styling rules, use
   only if absolutely necessary*/
@@ -278,7 +282,7 @@ aside, section {
 
 #searchbar {
   position: relative;
-  down: 300px;
+  /* down: 300px; */
   right: 30px;
 }
 
