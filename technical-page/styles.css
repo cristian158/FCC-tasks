@@ -1,3 +1,24 @@
+:root {
+  /* font family */
+  --ff-primary: 'Dancing Script', cursive;
+  --ff-secondary: 'Caveat', cursive;
+  /* font weigh */
+  --fw-reg: 300;
+  --fw-bold: 900;
+  /* color */
+  --clr-light: #97dde3;
+  --clr-dark: #3c5555;
+  --clr-accent: #16e0bd;
+  /* font sizes, always in rem */
+  --fs-h1: 3rem;
+  --fs-h2: 2.3rem;
+  --fs-h3: 1.3rem;
+  --fs-body: 2rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25); /* box shadow*/
+        /* 0.125em 0.125em 0.25em rgba(0,0,0,.15); */
+}
+
 html, body {
     min-width: 290px;
     color: #4d4e53;
@@ -6,25 +27,33 @@ html, body {
     line-height: 1.5;
 }
 
-.container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-}
-
-main-doc {
-
-}
-
 h1 {font-size: 2.3em;}
 h2 {font-size: 1.7em;}
 h3 {font-size: 1.2em;}
 p {font-size: .8em;}
 
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.item {
+  max-width: 70%;
+  padding: 1.8em;
+  margin: .3em;
+  box-shadow: var(--bs);
+  border-radius: .7em;
+}
+
+#navbar {
+  width: 25%;
+  background-color: rgba(124, 200, 200, 0.4);
+  /* backdrop-filter: blur(100px); */
+}
+
 /* #navbar {
   position: fixed;
-  background-color: rgba(124, 200, 200, 0.4);
-  backdrop-filter: blur(10px);
   font-family: monospace;
   font-size: 1.5em;
 } */
