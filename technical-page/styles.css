@@ -30,7 +30,7 @@ html, body {
 h1 {font-size: 2.3em;}
 h2 {font-size: 1.7em;}
 h3 {font-size: 1.2em;}
-p {font-size: .8em;}
+p {font-size: .8em; margin-left: 1em;}
 
 .container {
     display: flex;
@@ -47,13 +47,10 @@ p {font-size: .8em;}
 }
 
 #navbar {
-  width: 25%;
+  width: auto;
   background-color: rgba(124, 200, 200, 0.4);
-  /* backdrop-filter: blur(100px); */
 }
 
-/* #navbar {
-  position: fixed;
-  font-family: monospace;
-  font-size: 1.5em;
-} */
+.modules {
+  margin-left: 1em;
+}
